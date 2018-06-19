@@ -1,0 +1,13 @@
+.mpc-container {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.mpc-container img {
+  max-height: auto;
+  max-width: 100%;
+}
+
+.mpc-icon {
+  width: 100%;
+}
