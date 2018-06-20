@@ -32,5 +32,6 @@
 }
 
 .flash-key {
-  fill: yellow !important;
+  fill: black !important;
+  transition: fill 1s ease;
 }
