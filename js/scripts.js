@@ -30,6 +30,7 @@ var blocks = [];
 
 function add(sample) {
   var block = sample;
+      // width of #midi-grid... update whole array on resize ... proportion
       block.left = 1000;
       blocks.push(block);
 }
