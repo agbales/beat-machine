@@ -4,12 +4,12 @@ window.addEventListener("keydown", sampleLookup);
 function sampleLookup(event) {
   var key = event.key;
   var samples = {
-    "f" : { audio: "Snare01.wav", key: "f", height: 0, color: "#FF0000" },
-    "h" : { audio: "Kick01.wav", key: "h", height: 40, color: "#FF0000" },
-    "g" : { audio: "Hat01.wav", key: "g", height: 80, color: "#FF0000" },
-    "t" : { audio: "Hat02.wav", key: "t", height: 120, color: "#FF0000" },
-    "r" : { audio: "Snare02.wav", key: "r", height: 160, color: "#FF0000" },
-    "v" : { audio: "Snare03.wav", key: "v", height: 200, color: "#FF0000" }
+    "r" : { audio: "Snare02.wav", key: "r", height: 0, color: "#e1f7d5" },
+    "t" : { audio: "Hat02.wav", key: "t", height: 30, color: "#ffbdbd" },
+    "f" : { audio: "Snare01.wav", key: "f", height: 60, color: "#c9c9ff" },
+    "g" : { audio: "Hat01.wav", key: "g", height: 90, color: "#f1cbff" },
+    "h" : { audio: "Kick01.wav", key: "h", height: 120, color: "#e1f7d5" },
+    "v" : { audio: "Snare03.wav", key: "v", height: 150, color: "#ffbdbd" }
   }
   var sample = samples[key];
 
@@ -49,7 +49,7 @@ function update() {
 }
 
 function updateMidiGrid(blocks) {
-  var canvas = document.getElementById("myCanvas");
+  var canvas = document.getElementById("midi-grid");
   var ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
