@@ -39,7 +39,7 @@
     updateMidiGrid(blocks);
   }
 
-  var t = setInterval(update, 100); // Need to determine BPM ratios
+  var t = setInterval(update, 80); // 94 BPM... goal
 
   function update() {
     // append
