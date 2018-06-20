@@ -4,12 +4,12 @@ window.addEventListener("keydown", sampleLookup);
 function sampleLookup(event) {
   var key = event.key;
   var samples = {
-    "f" : { audio: "Snare01.wav", key: "f" },
-    "h" : { audio: "Kick01.wav", key: "h" },
-    "g" : { audio: "Hat01.wav", key: "g" },
-    "t" : { audio: "Hat02.wav", key: "t" },
-    "r" : { audio: "Snare02.wav", key: "r" },
-    "v" : { audio: "Snare03.wav", key: "v" }
+    "f" : { audio: "Snare01.wav", key: "f", height: 0, color: "#FF0000" },
+    "h" : { audio: "Kick01.wav", key: "h", height: 40, color: "#FF0000" },
+    "g" : { audio: "Hat01.wav", key: "g", height: 80, color: "#FF0000" },
+    "t" : { audio: "Hat02.wav", key: "t", height: 120, color: "#FF0000" },
+    "r" : { audio: "Snare02.wav", key: "r", height: 160, color: "#FF0000" },
+    "v" : { audio: "Snare03.wav", key: "v", height: 200, color: "#FF0000" }
   }
   var sample = samples[key];
 
@@ -30,17 +30,16 @@ var blocks = [];
 
 function add(sample) {
   var block = sample;
-      block.position = {}
-      block.position.left = 1000;
+      block.left = 1000;
       blocks.push(block);
 }
 
-var t = setInterval(update,164); //88 bpm?
+var t = setInterval(update,164); // Need to determine BPM ratios
 
 function update() {
   blocks.forEach(function(b, i) {
-  	blocks[i].position.left =  blocks[i].position.left - 50;
-    if (blocks[i].position.left < 0) {
+  	blocks[i].left =  blocks[i].left - 50;
+    if (blocks[i].left < 0) {
       console.log('delete', blocks[i])
       blocks.splice(i,1);
     }
@@ -55,7 +54,7 @@ function updateMidiGrid(blocks) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   blocks.forEach(function(b){
-    ctx.fillStyle = "#FF0000";
-    ctx.fillRect(b.position.left,0,30,20);
+    ctx.fillStyle = b.color;
+    ctx.fillRect(b.left,b.height,30,20);
   });
 }
