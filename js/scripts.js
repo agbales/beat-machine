@@ -30,16 +30,17 @@ var blocks = [];
 
 function add(sample) {
   var block = sample;
-      // width of #midi-grid... update whole array on resize ... proportion
-      block.left = 1000;
-      blocks.push(block);
+  // width of #midi-grid... update whole array on resize ... proportion
+  block.left = 300;
+  blocks.push(block);
+  updateMidiGrid(blocks);
 }
 
-var t = setInterval(update,100); // Need to determine BPM ratios
+var t = setInterval(update,20); // Need to determine BPM ratios
 
 function update() {
   blocks.forEach(function(b, i) {
-  	blocks[i].left =  blocks[i].left - 40;
+  	blocks[i].left =  blocks[i].left - 5;
     if (blocks[i].left < 0) {
       console.log('delete', blocks[i])
       blocks.splice(i,1);
@@ -56,6 +57,6 @@ function updateMidiGrid(blocks) {
 
   blocks.forEach(function(b){
     ctx.fillStyle = b.color;
-    ctx.fillRect(b.left,b.height,30,20);
+    ctx.fillRect(b.left,b.height,20,20);
   });
 }
