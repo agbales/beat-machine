@@ -31,15 +31,15 @@ var blocks = [];
 function add(sample) {
   var block = sample;
       block.position = {}
-      block.position.left = 400;
+      block.position.left = 1000;
       blocks.push(block);
 }
 
-var t = setInterval(update,1000);
+var t = setInterval(update,164); //88 bpm?
 
 function update() {
   blocks.forEach(function(b, i) {
-  	blocks[i].position.left =  blocks[i].position.left - 100;
+  	blocks[i].position.left =  blocks[i].position.left - 50;
     if (blocks[i].position.left < 0) {
       console.log('delete', blocks[i])
       blocks.splice(i,1);
