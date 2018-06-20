@@ -15,6 +15,7 @@ function sampleLookup(event) {
 
   if (sample) {
     play(sample);
+    highlightKeyboard(sample.key);
     add(sample);
   }
 }
@@ -59,4 +60,12 @@ function updateMidiGrid(blocks) {
     ctx.fillStyle = b.color;
     ctx.fillRect(b.left,b.height,20,20);
   });
+}
+
+function highlightKeyboard(key) {
+  console.log("key", key);
+  document.getElementById(key).classList.add('flash-key');
+  setTimeout(function() {
+    document.getElementById(key).classList.remove('flash-key');
+  }, 100);
 }

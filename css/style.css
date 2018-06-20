@@ -1,3 +1,22 @@
+.keyboard {
+  position: relative;
+  display: inline-block;
+  transition: transform 150ms ease-in-out;
+}
+
+.keyboard img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+.keyboard svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #midi-grid {
   width: 400px;
   height: 175px;
@@ -6,4 +25,12 @@
 
 .mpc-icon {
   width: 100%;
+}
+
+.player-grid {
+  margin-top: 90px;
+}
+
+.flash-key {
+  fill: yellow !important;
 }
