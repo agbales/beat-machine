@@ -1,11 +1,7 @@
-.mpc-container {
-  max-width: 400px;
-  max-height: 400px;
-}
-
-.mpc-container img {
-  max-height: auto;
-  max-width: 100%;
+#midi-grid {
+  width: 100%;
+  height: 175px;
+  border:1px solid #c3c3c3;
 }
 
 .mpc-icon {

@@ -34,11 +34,11 @@ function add(sample) {
       blocks.push(block);
 }
 
-var t = setInterval(update,164); // Need to determine BPM ratios
+var t = setInterval(update,100); // Need to determine BPM ratios
 
 function update() {
   blocks.forEach(function(b, i) {
-  	blocks[i].left =  blocks[i].left - 50;
+  	blocks[i].left =  blocks[i].left - 40;
     if (blocks[i].left < 0) {
       console.log('delete', blocks[i])
       blocks.splice(i,1);

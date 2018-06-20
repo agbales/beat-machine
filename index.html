@@ -3,28 +3,37 @@
 <head>
   <title>Keypress</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-  <h1>Beat Machine</h1>
+  <div class="container">
 
+    <div class="row">
+      <div class="col">
+        <!-- mpc icon -->
+        <img class="mpc-icon" src="./images/mpc.png">
+      </div>
+      <div class="col">
+        <audio controls loop>
+          <!-- audio loop player -->
+          <source src="./samples/Orchestra-Diskretion.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <!-- keyboard icon -->
+        <img src="./images/keyboard.png">
+      </div>
+    </div>
 
-  <div class="mpc-container">
-    <!-- mpc icon -->
-    <img class="mpc-icon" src="./images/mpc.png">
-    <!-- audio loop player -->
-    <audio controls loop>
-      <source src="./samples/Orchestra-Diskretion.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <!-- keyboard icon -->
-    <img src="./images/keyboard.png">
+    <div class="row">
+      <div class="col-12">
+        <canvas id="midi-grid">
+        Your browser does not support the canvas element.
+        </canvas>
+      </div>
+    </div>
+
   </div>
-
-  <canvas id="midi-grid" width="1000" height="175"
-  style="border:1px solid #c3c3c3;">
-  Your browser does not support the canvas element.
-  </canvas>
 
   <!-- Scripts -->
   <script src="./js/scripts.js"></script>
