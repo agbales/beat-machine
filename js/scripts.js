@@ -87,7 +87,7 @@
   function updateMidiBarLines() {
     var canvas = document.getElementById("midi-grid");
     var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+    ctx.strokeStyle = 'rgba(0,0,0,0.05)';
     ctx.lineWidth = 1;
 
     bars.forEach(function(b, i) {
