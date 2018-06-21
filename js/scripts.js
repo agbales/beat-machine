@@ -65,7 +65,7 @@
       ctx.fillRect(b.left,b.height,20,20);
     });
 
-    // updateMidiBarLines();
+    updateMidiBarLines();
   }
 
   var bars = [400, 300, 200, 100];
