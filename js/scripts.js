@@ -33,13 +33,22 @@
 
   function add(sample) {
     var block = sample;
-    // width of #midi-grid... update whole array on resize ... proportion
     block.left = 300;
     blocks.push(block);
     updateMidiGrid(blocks);
   }
 
-  var t = setInterval(update, 80); // 94 BPM... goal
+
+  var showBars = false;
+  var sampleTrack = document.getElementById("sampleTrack");
+  sampleTrack.onplay = function() {
+    showBars = true;
+  };
+  sampleTrack.onpause = function () {
+    showBars = false;
+  }
+
+  var t = setInterval(update, 78); // 93 BPM...
 
   function update() {
     // append
@@ -65,7 +74,12 @@
       ctx.fillRect(b.left,b.height,20,20);
     });
 
-    updateMidiBarLines();
+    if (showBars) {
+      console.log('showing bars');
+      updateMidiBarLines();
+    } else {
+      console.log('NOT showing bars')
+    }
   }
 
   var bars = [400, 300, 200, 100];
