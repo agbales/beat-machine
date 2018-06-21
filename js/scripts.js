@@ -6,12 +6,12 @@
   function sampleLookup(event) {
     var key = event.key;
     var samples = {
-      "r" : { audio: "Snare02.wav", key: "r", height: 0, color: "#e1f7d5" },
+      "r" : { audio: "Snare02.wav", key: "r", height: 0, color: "#f3f298" },
       "t" : { audio: "Hat02.wav", key: "t", height: 30, color: "#ffbdbd" },
       "f" : { audio: "Snare01.wav", key: "f", height: 60, color: "#c9c9ff" },
       "g" : { audio: "Hat01.wav", key: "g", height: 90, color: "#f1cbff" },
       "h" : { audio: "Kick01.wav", key: "h", height: 120, color: "#e1f7d5" },
-      "v" : { audio: "Snare03.wav", key: "v", height: 150, color: "#ffbdbd" }
+      "v" : { audio: "Snare03.wav", key: "v", height: 150, color: "#C4FAF8" }
     }
     var sample = samples[key];
 
