@@ -1,12 +1,10 @@
 # Dilla Swing
 
-Pitch for The Pudding! Thanks for taking a look.
+Thanks for taking a look!
 
 ## Getting Started
 
-Clone or download the repo, which includes images & samples.
-
-Open: index.html
+Test out the "Beat Machine" by cloning or downloading the repo. All the samples and images are included. Just open: index.html
 
 ![screen shot](https://raw.githubusercontent.com/agbales/beat-machine/master/images/beat-machine-screeshot.png?token=ANKiE77Zo0992MU3_N7kICnicZVP6YU7ks5bNGSiwA%3D%3D)
 
